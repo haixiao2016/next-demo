@@ -21,7 +21,7 @@ const Details = ({ data }) => (
 
 
 Details.getInitialProps = async (context) => {
-  const response = await axios.get(`http://api.haixiao.online/details/${context.query.id}`)
+  const response = await axios.get(`https://www.jianshu.com/asimov/p/${context.query.id}`)
   return {
     data: response.data
   }

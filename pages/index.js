@@ -32,7 +32,7 @@ const Home = ({ list }) => {
 export default Home
 
 Home.getInitialProps = async () => {
-  const response = await axios.get("http://api.haixiao.online/list")
+  const response = await axios.get("https://www.jianshu.com/asimov/trending/now")
   return {
     list: response.data
   }
