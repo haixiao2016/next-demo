@@ -10,9 +10,11 @@ const Details = ({ data }) => (
   <LayoutApp>
     <Header>
       <title>{data.public_title}</title>
-      <meta property="twitter:type" content="summary" />
+      {/* twitter */}
+      <meta name="twitter:title" content="静态页面 - next" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:description" content={data.description} />
       <meta name="twitter:image" content={data.share_image_url} />
-      <meta name="description" content={data.description} />
     </Header>
     <Item item={data} />
   </LayoutApp>
