@@ -12,11 +12,10 @@ const Home = () => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover" />
         <meta name="twitter:card" content="summary"></meta>
-        <meta property="og:image" content="http://ssr.haixiao.online/public/images/share.jpeg" />
-        <meta name="twitter:image" content="http://ssr.haixiao.online/public/images/share.jpeg" />
+        <meta property="og:image" content="http://ssr.haixiao.online/images/share.jpeg" />
+        <meta name="twitter:image" content="http://ssr.haixiao.online/images/share.jpeg" />
         <meta name="description" content="渲染的数据是静态数据，我是分享之后的文案CZCZCZCZCZ" />
       </Header>
-      <div className="name">dadad</div>
       <Result
         status="500"
         title="这是静态页面"
