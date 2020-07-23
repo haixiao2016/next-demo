@@ -12,6 +12,7 @@ const Home = () => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover" />
         {/* twitter */}
+        <meta name="twitter:title" content="静态页面 - next" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:description" content="渲染的数据是静态数据，我是分享之后的文案CZCZCZCZCZ" />
         <meta name="twitter:image" content="http://ssr.haixiao.online/images/share.jpeg" />
