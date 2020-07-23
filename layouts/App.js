@@ -32,7 +32,7 @@ const LayoutApp = (props) => {
     <Content style={{ padding: '0 50px', marginTop: 40 }}>
       <div className="site-layout-content" style={{ minHeight: 400, background: "#fff", padding: 10 }}>{props.children}</div>
     </Content>
-    <Footer style={{ textAlign: 'center' }}>Design ©2020 Created by next.haixiao.online</Footer>
+    <Footer style={{ textAlign: 'center' }}>Design ©2020 Created by next.haixiao.online <a href="https://twitter.com/share?text=分享标题&url=http://ssr.haixiao.online" target="_blank">Twitter</a></Footer>
   </Layout>
   )
 }
