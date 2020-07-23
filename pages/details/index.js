@@ -10,8 +10,7 @@ const Details = ({ data }) => (
   <LayoutApp>
     <Header>
       <title>{data.public_title}</title>
-      <meta property="og:image" content={data.share_image_url} />
-      <meta property="twitter:type" content="article" />
+      <meta property="twitter:type" content="summary" />
       <meta name="twitter:image" content={data.share_image_url} />
       <meta name="description" content={data.description} />
     </Header>

@@ -14,7 +14,7 @@ const Home = ({ list }) => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover" />
         <meta property="og:image" content="https://upload.jianshu.io/users/upload_avatars/11680122/414fdcc5-518f-4910-97af-b62d5259be5f.jpg" />
-        <meta property="twitter:type" content="article" />
+        <meta property="twitter:type" content="summary" />
         <meta name="twitter:image" content="https://upload.jianshu.io/users/upload_avatars/11680122/414fdcc5-518f-4910-97af-b62d5259be5f.jpg" />
         <meta name="description" content="这是列表页面的数据，我是分享之后的文案CZCZCZCZCZ" />
       </Header>
