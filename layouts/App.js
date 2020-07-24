@@ -10,6 +10,9 @@ const menuList = [{
 }, {
   route: "/list",
   name: "页面2"
+},{
+  route: "/mock",
+  name: "页面3"
 }]
 
 const LayoutApp = (props) => {
