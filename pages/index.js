@@ -15,6 +15,7 @@ const Home = () => {
         <meta name="keywords" content="next测试页面,静态页面,首页,渲染的数据是静态数据,海晓的测试网站" />
         <meta name="description" content="渲染的数据是静态数据，海晓的测试网站" />
         <meta name="baidu-site-verification" content="4UjWmkyo3W" />
+        <meta name="google-site-verification" content="ttJp-Kr0xxX5KFbshRefYPagU-Wfv0yehHJSgdKO5Lo" />
         <meta name="twitter:title" content="静态页面 - next" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:description" content="渲染的数据是静态数据，我是分享之后的文案CZCZCZCZCZ" />
