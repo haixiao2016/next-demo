@@ -9,6 +9,9 @@ const MockDetails = ({ data }) => (
   <LayoutApp>
     <Header>
       <title>{data.public_title}</title>
+      <meta name="keywords" content="next测试页面,静态页面,首页,渲染的数据是静态数据,海晓的测试网站" />
+      <meta name="description" content={data.description} />
+      <meta name="baidu-site-verification" content="4UjWmkyo3W" />
       <meta name="twitter:title" content={data.public_title} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:description" content={data.description} />
