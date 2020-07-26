@@ -27,7 +27,9 @@ const LayoutApp = (props) => {
       <Menu theme="dark" mode="horizontal" selectedKeys={[currentRoute]}>
         {
           menuList.map(v =>
-            (<Menu.Item key={v.route}><Link href={v.route}>{v.name}</Link></Menu.Item>)
+            (<Menu.Item key={v.route}>
+              <Link href={v.route}><a>{v.name}</a></Link>
+            </Menu.Item>)
           )
         }
       </Menu>
