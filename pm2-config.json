@@ -3,6 +3,7 @@
   "cwd": "./",
   "out_file": "./logs/app-out.log",
   "error_file": "./logs/app-err.log",
+  "script": "yarn start",
   "watch": [
     ".next"
   ],
