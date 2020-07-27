@@ -23,8 +23,8 @@ const Home = () => {
       </Header>
       <Result
         status="500"
-        title="这是静态页面"
-        subTitle="渲染的数据是静态数据"
+        title="这是静态页面~"
+        subTitle="渲染的数据是静态数据~"
       />
     </LayoutApp>
   )
