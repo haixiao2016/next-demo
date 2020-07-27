@@ -1,9 +1,9 @@
 /* eslint-disable */
 const withLess = require('@zeit/next-less')
-
-module.exports = withLess({
+const withPlugins = require('next-compose-plugins')
+module.exports = withPlugins([withLess], {
   lessLoaderOptions: {
-    javascriptEnabled: true
+    javascriptEnabled: true,
   },
   webpack: (config, { isServer }) => {
     if (isServer) {

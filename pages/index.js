@@ -1,7 +1,7 @@
 import React from "react"
 import Header from 'next/head'
-import { Result } from 'antd';
-// import style from "./index.scss"
+import { Result } from 'antd'
+import "./index.less"
 
 import LayoutApp from '../layouts/App'
 const Home = () => {
