@@ -1,6 +1,5 @@
 import Header from 'next/head'
 import Router from 'next/router'
-import 'antd/dist/antd.css'
 import React, { useState } from 'react'
 import { Spin } from 'antd'
 
