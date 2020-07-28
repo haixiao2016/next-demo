@@ -4,7 +4,7 @@ import axios from 'axios'
 import { Typography } from 'antd'
 import Link from 'next/link'
 
-import LayoutApp from '../../layouts/App'
+import LayoutApp from '@/layouts/App'
 const { Title, Paragraph } = Typography
 const Home = ({ list }) => {
   return (

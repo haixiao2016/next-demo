@@ -1,7 +1,10 @@
 /* eslint-disable */
 const withLess = require('@zeit/next-less')
 const withPlugins = require('next-compose-plugins')
-module.exports = withPlugins([withLess], {
+const bundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+module.exports = withPlugins([withLess, bundleAnalyzer], {
   lessLoaderOptions: {
     javascriptEnabled: true,
   },

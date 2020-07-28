@@ -1,7 +1,7 @@
 import React, { Fragment }  from 'react'
 import { withRouter } from 'next/router'
 import Header from 'next/head'
-import LayoutApp from '../../layouts/App'
+import LayoutApp from '@/layouts/App'
 import axios from 'axios'
 import { Typography } from 'antd'
 const { Title, Paragraph } = Typography

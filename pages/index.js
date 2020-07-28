@@ -3,7 +3,7 @@ import Header from 'next/head'
 import { Result } from 'antd'
 import "./index.less"
 
-import LayoutApp from '../layouts/App'
+import LayoutApp from '@/layouts/App'
 const Home = () => {
   return (
     <LayoutApp>
