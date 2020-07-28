@@ -6,13 +6,16 @@ import { withRouter } from 'next/router'
 const { Header, Content, Footer } = Layout
 const menuList = [{
   route: "/",
-  name: "页面1"
+  name: "首页"
 }, {
   route: "/list",
-  name: "页面2"
+  name: "文章列表"
 },{
   route: "/mock",
-  name: "页面3"
+  name: "静态渲染"
+},{
+  route: "/serverRender",
+  name: "服务器渲染"
 }]
 
 const LayoutApp = (props) => {

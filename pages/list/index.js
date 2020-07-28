@@ -30,10 +30,12 @@ const Home = ({ list }) => {
 
 export default Home
 
-Home.getInitialProps = async () => {
+export async function getServerSideProps () {
   const response = await axios.get("http://api.haixiao.online/list")
   return {
-    list: response.data
+    props: {
+      list: response.data
+    }
   }
 }
 

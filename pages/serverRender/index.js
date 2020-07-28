@@ -1,20 +1,18 @@
 import React, { Fragment }  from 'react'
-import { withRouter } from 'next/router'
 import Header from 'next/head'
 import LayoutApp from '../../layouts/App'
 import axios from 'axios'
 import { Typography } from 'antd'
 const { Title, Paragraph } = Typography
 
-const Details = ({ data }) => (
+const ServerRender = ({ data }) => (
   <LayoutApp>
     <Header>
       <title>{data.public_title}</title>
-      <meta name="keywords" content="next测试页面,静态页面,首页,渲染的数据是静态数据,海晓的测试网站" />
+      <meta name="keywords" content="next服务器渲染,服务器渲染,首页,渲染的数据是静态数据,海晓的测试网站" />
       <meta name="description" content={data.description} />
       <meta name="baidu-site-verification" content="4UjWmkyo3W" />
-      {/* twitter */}
-      <meta name="twitter:title" content="静态页面 - next" />
+      <meta name="twitter:title" content={data.public_title} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:description" content={data.description} />
       <meta name="twitter:image" content={data.share_image_url} />
@@ -23,16 +21,16 @@ const Details = ({ data }) => (
   </LayoutApp>
 )
 
-export async function getServerSideProps (context) {
-  const response = await axios.get(`http://api.haixiao.online/details/${context.query.id}`)
+export async function getServerSideProps() {
+  const response = await axios.get(`http://api.haixiao.online/mock/details`)
   return {
     props: {
-      data: response.data
+      data: response.data.data
     }
   }
 }
 
-export default withRouter(Details)
+export default ServerRender
 
 
 const Item = ({item}) => (

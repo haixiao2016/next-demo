@@ -21,11 +21,12 @@ const MockDetails = ({ data }) => (
   </LayoutApp>
 )
 
-
-MockDetails.getInitialProps = async () => {
+export async function getStaticProps() {
   const response = await axios.get(`http://api.haixiao.online/mock/details`)
   return {
-    data: response.data.data
+    props: {
+      data: response.data.data
+    }
   }
 }
 
