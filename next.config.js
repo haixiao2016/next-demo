@@ -8,6 +8,7 @@ module.exports = withPlugins([withLess, bundleAnalyzer], {
   lessLoaderOptions: {
     javascriptEnabled: true,
   },
+  generateEtags: false,
   webpack: (config, { isServer }) => {
     if (isServer) {
       const antStyles = /antd\/.*?\/style.*?/
