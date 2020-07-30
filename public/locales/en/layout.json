@@ -1,0 +1,8 @@
+{
+  "menuList": {
+    "home": "home",
+    "article": "article",
+    "staticPage": "staticPage",
+    "ssr": "SSR"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "menuList": {
+    "home": "首页",
+    "article": "文章列表",
+    "staticPage": "预渲染页面",
+    "ssr": "服务器渲染"
+  }
+}

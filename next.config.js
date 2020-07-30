@@ -4,20 +4,11 @@ const withPlugins = require('next-compose-plugins')
 const bundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
-const { nextI18NextRewrites } = require('next-i18next/rewrites')
-const localeSubpaths = {
-  en: 'en',
-  cn: 'cn'
-}
 module.exports = withPlugins([withLess, bundleAnalyzer], {
   lessLoaderOptions: {
     javascriptEnabled: true,
   },
   generateEtags: false,
-  rewrites: async () => nextI18NextRewrites(localeSubpaths),
-  publicRuntimeConfig: {
-    localeSubpaths,
-  },
   webpack: (config, { isServer }) => {
     if (isServer) {
       const antStyles = /antd\/.*?\/style.*?/

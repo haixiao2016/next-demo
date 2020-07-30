@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
+    "dev": "node server/index.js",
     "build": "next build",
-    "start": "next start -p 4399",
+    "start": "NODE_ENV=production PORT=4399 node server/index.js",
     "export": "next build && next export",
     "analyzer": "ANALYZE=true yarn build"
   },
@@ -14,8 +14,9 @@
     "@zeit/next-css": "^1.0.1",
     "antd": "^4.4.3",
     "axios": "^0.19.2",
+    "express": "^4.17.1",
     "next": "^9.4.4",
-    "next-i18next": "^6.0.0",
+    "next-translate": "^0.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
