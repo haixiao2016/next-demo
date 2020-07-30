@@ -1,6 +1,7 @@
 import Header from 'next/head'
 import Router from 'next/router'
 import React, { useState } from 'react'
+import { appWithTranslation } from '../i18n'
 import { Spin } from 'antd'
 
 const App = ({ Component, pageProps}) => {
@@ -18,4 +19,4 @@ const App = ({ Component, pageProps}) => {
   )
 }
 
-export default App
+export default appWithTranslation(App)

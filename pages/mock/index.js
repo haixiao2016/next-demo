@@ -3,9 +3,10 @@ import Header from 'next/head'
 import LayoutApp from '@/layouts/App'
 import axios from 'axios'
 import { Typography } from 'antd'
+import { withTranslation } from '@/i18n'
 const { Title, Paragraph } = Typography
 
-const MockDetails = ({ data }) => (
+const MockDetails = ({ data, t }) => (
   <LayoutApp>
     <Header>
       <title>{data.public_title}</title>
@@ -17,6 +18,7 @@ const MockDetails = ({ data }) => (
       <meta name="twitter:description" content={data.description} />
       <meta name="twitter:image" content={data.share_image_url} />
     </Header>
+    <div>{t('name')}</div>
     <Item item={data} />
   </LayoutApp>
 )
@@ -30,7 +32,7 @@ export async function getStaticProps() {
   }
 }
 
-export default MockDetails
+export default withTranslation('mock')(MockDetails)
 
 
 const Item = ({item}) => (
