@@ -1,11 +1,11 @@
 import React, { Fragment }  from 'react'
 import Header from 'next/head'
 import LayoutApp from '@/layouts/App'
-import axios from 'axios'
 import { Typography } from 'antd'
 const { Title, Paragraph } = Typography
-
-const MockDetails = ({ data}) => {
+import mockData from './index.json'
+const MockDetails = () => {
+  const { data } = mockData
   return (
     <LayoutApp>
       <Header>
@@ -21,15 +21,6 @@ const MockDetails = ({ data}) => {
       <Item item={data} />
     </LayoutApp>
   )
-}
-
-export async function getServerSideProps() {
-  const response = await axios.get(`http://api.haixiao.online/mock/details`)
-  return {
-    props: {
-      data: response.data.data
-    }
-  }
 }
 
 export default MockDetails
