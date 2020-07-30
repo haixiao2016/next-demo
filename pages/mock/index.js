@@ -23,7 +23,7 @@ const MockDetails = ({ data}) => {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const response = await axios.get(`http://api.haixiao.online/mock/details`)
   return {
     props: {
