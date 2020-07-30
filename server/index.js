@@ -12,6 +12,12 @@ const PORT = parseInt(process.env.PORT, 10) || 4444
 // You should add this middleware
 server.use(i18nMiddleware(i18nConfig))
 
+server.get('/_next/data/*/en/*.json', (req, res)=> {
+  return res.redirect(301, req.url.replace("/en/", "/"))
+})
+server.get('/_next/data/*/cn/*.json', (req, res)=> {
+  return res.redirect(301, req.url.replace("/cn/", "/"))
+})
 server.get('*', handle)
 
 module.exports = app
