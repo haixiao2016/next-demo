@@ -9,6 +9,7 @@ const { Header, Content, Footer } = Layout
 
 const LayoutApp = (props) => {
   const { t, lang: currentLang } = useTranslation()
+  console.log(currentLang)
   const [currentRoute, setCurrentRoute] = useState()
   const [lang] = useState(currentLang)
   const menuList = [{
