@@ -31,7 +31,7 @@ const Home = ({ list }) => {
 export default Home
 
 export async function getServerSideProps (ctx) {
-  const response = await request.get("http://localhost:8888/list")
+  const response = await request.get("http://api.haixiao.online/list")
   return {
     props: {
       list: response.data
