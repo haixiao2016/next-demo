@@ -1,6 +1,6 @@
 import React, { Fragment } from "react"
 import Header from 'next/head'
-import axios from 'axios'
+import request from '@/utils/request'
 import { Typography } from 'antd'
 import Link from 'next/link'
 
@@ -30,8 +30,8 @@ const Home = ({ list }) => {
 
 export default Home
 
-export async function getServerSideProps () {
-  const response = await axios.get("http://api.haixiao.online/list")
+export async function getServerSideProps (ctx) {
+  const response = await request.get("http://localhost:8888/list")
   return {
     props: {
       list: response.data

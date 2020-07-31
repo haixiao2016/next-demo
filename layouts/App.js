@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Layout, Menu, Select } from 'antd'
-import { withRouter, useRouter } from 'next/router'
+import { withRouter } from 'next/router'
 import Link from 'next-translate/Link'
 import useTranslation from 'next-translate/useTranslation'
-import Router from 'next-translate/Router'
 import "./app.less"
 
 const { Header, Content, Footer } = Layout
@@ -11,8 +10,7 @@ const { Header, Content, Footer } = Layout
 const LayoutApp = (props) => {
   const { t, lang: currentLang } = useTranslation()
   const [currentRoute, setCurrentRoute] = useState()
-  const [lang, setLang] = useState(currentLang)
-  const router = useRouter() // 获取当前的路由信息
+  const [lang] = useState(currentLang)
   const menuList = [{
     route: "/",
     name: t("layout:menuList.home")
@@ -30,10 +28,12 @@ const LayoutApp = (props) => {
   useEffect(() => {
     setCurrentRoute(props.router.route)
   }, []);
-  // 切换语言
-  function handleChangeLang(lang) {
-    setLang(lang)
-    Router.replaceI18n({ url: router.pathname, options: { lang } })
+  // 切换语言,不使用默认的切换事件
+  function handleChangeLang(nextLang) {
+    if(window) {
+      const url = window.location.href.replace(`/${lang}/`, `/${nextLang}/`)
+      window.location.href = url
+    }
   }
   return (
     <Layout className="layout">

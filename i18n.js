@@ -10,5 +10,6 @@ module.exports = {
     '*': ['common', 'layout'],
     '/': [],
     '/mock': ['mock'],
+    '/serverRender': ['mock'],
   },
 }
