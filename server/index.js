@@ -14,12 +14,6 @@ const PORT = parseInt(process.env.PORT, 10) || 4444
 server.use(i18nMiddleware(i18nConfig))
 server.use(setHeaderMiddleware())
 
-const allLanguages = i18nConfig.allLanguages
-for (const lang of allLanguages) {
-  server.get(`/_next/data/*/${lang}/*.json`, (req, res)=> {
-    return res.redirect(301, req.url.replace(`/${lang}/`, "/"))
-  })
-}
 server.get('*', handle)
 
 module.exports = app

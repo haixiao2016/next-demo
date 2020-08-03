@@ -8,8 +8,8 @@ const service = axios.create({
 // 添加token && lang
 service.interceptors.request.use(
   (config) => {
-    config.headers.lang = getCookie('lang', config)
-    config.headers.lang = 'cn'
+    // config.headers.lang = getCookie('lang', config)
+    // config.headers.lang = 'cn'
     // 其他请求待定
     return config
   },

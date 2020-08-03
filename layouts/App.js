@@ -9,7 +9,6 @@ const { Header, Content, Footer } = Layout
 
 const LayoutApp = (props) => {
   const { t, lang: currentLang } = useTranslation()
-  console.log(currentLang)
   const [currentRoute, setCurrentRoute] = useState()
   const [lang] = useState(currentLang)
   const menuList = [{
@@ -32,7 +31,7 @@ const LayoutApp = (props) => {
   // 切换语言,不使用默认的切换事件
   function handleChangeLang(nextLang) {
     if(window) {
-      const url = window.location.href.replace(`/${lang}/`, `/${nextLang}/`)
+      const url = window.location.href.replace(`/${lang}`, `/${nextLang}`)
       window.location.href = url
     }
   }

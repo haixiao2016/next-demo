@@ -26,14 +26,12 @@ const ServerRender = ({ data }) => {
   )
 }
 
-export async function getServerSideProps(ctx) {
-  const response = await request.get(`http://api.haixiao.online/mock/details`)
+ServerRender.getInitialProps = async () => {
+  const response = await request.get(`http://api.haixiao.online/mock/details`);
   return {
-    props: {
-      data: response.data.data
-    }
-  }
-}
+    data: response.data.data
+  };
+};
 
 export default ServerRender
 

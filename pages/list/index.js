@@ -30,14 +30,12 @@ const Home = ({ list }) => {
 
 export default Home
 
-export async function getServerSideProps (ctx) {
-  const response = await request.get("http://api.haixiao.online/list")
+Home.getInitialProps = async () => {
+  const response = await request.get(`http://api.haixiao.online/list`);
   return {
-    props: {
-      list: response.data
-    }
-  }
-}
+    list: response.data
+  };
+};
 
 const ListItem = ({item}) => (
   <Fragment>

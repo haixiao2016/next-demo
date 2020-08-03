@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "node server/index.js",
+    "dev": "nodemon server/index.js",
     "build": "next build",
-    "start": "NODE_ENV=production PORT=4399 node server/index.js",
+    "start": "NODE_ENV=production PORT=4399 nodemon server/index.js",
     "export": "next build && next export",
     "analyzer": "ANALYZE=true yarn build"
   },
@@ -17,7 +17,8 @@
     "express": "^4.17.1",
     "js-cookie": "^2.2.1",
     "next": "^9.4.4",
-    "next-translate": "^0.17.1",
+    "next-translate": "0.17.2-canary.5",
+    "nodemon": "^2.0.4",
     "nookies": "^2.3.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

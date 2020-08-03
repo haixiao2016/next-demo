@@ -2,7 +2,7 @@ import React, { Fragment }  from 'react'
 import { withRouter } from 'next/router'
 import Header from 'next/head'
 import LayoutApp from '@/layouts/App'
-import axios from 'axios'
+import request from '@/utils/request'
 import { Typography } from 'antd'
 const { Title, Paragraph } = Typography
 
@@ -23,14 +23,12 @@ const Details = ({ data }) => (
   </LayoutApp>
 )
 
-export async function getServerSideProps (context) {
-  const response = await axios.get(`http://api.haixiao.online/details/${context.query.id}`)
+Details.getInitialProps = async () => {
+  const response = await request.get(`http://api.haixiao.online/details/${context.query.id}`)
   return {
-    props: {
-      data: response.data
-    }
+    data: response.data
   }
-}
+};
 
 export default withRouter(Details)
 
