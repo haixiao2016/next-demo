@@ -3,6 +3,8 @@
   "cwd": "./",
   "out_file": "./logs/app-out.log",
   "error_file": "./logs/app-err.log",
+  "log_date_format"  : "YYYY-MM-DD HH:mm Z",
+  "instances": 1,
   "script": "yarn start",
   "watch": [
     ".next"
